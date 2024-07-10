@@ -1,0 +1,347 @@
+#main {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.container {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  vertical-align: baseline;
+  -webkit-font-smoothing: antialiased;
+}
+
+.hide__bg {
+  width: 100%;
+  height: 100%;
+  background-color: var(--mainBg);
+  z-index: 1000;
+  position: relative;
+}
+
+.smooth__wrapper {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  overflow: hidden;
+  transition: none !important;
+}
+.smooth__wrapper .smooth__content {
+  translate: none;
+  scale: none;
+  rotate: none;
+  box-sizing: border-box;
+  width: 100%;
+  overflow: hidden;
+}
+.smooth__wrapper .smooth__content .main__inner {
+  max-width: 100vw;
+  width: 100vw;
+  max-height: 1279px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 0;
+  position: relative;
+  overflow: hidden;
+  transform: translate(0px, 0px);
+}
+.smooth__wrapper .smooth__content .main__inner .bg__line__wrappper {
+  width: 100%;
+  height: 100vh;
+  min-height: 911px;
+  position: relative;
+}
+.smooth__wrapper .smooth__content .main__inner .bg__line__wrappper svg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+}
+.smooth__wrapper .smooth__content .main__inner #projectSection {
+  width: 101vw;
+  height: 101vh;
+  background-color: transparent;
+  display: none;
+}
+.smooth__wrapper .smooth__content .main__inner .content__section {
+  width: 80vw;
+  height: 80vh;
+  position: absolute;
+  display: flex;
+  top: calc(50% - 50vh);
+  bottom: calc(50% - 50vh);
+  left: calc(50% - 50vw);
+  right: calc(50% - 50vw);
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  background-color: var(--mainBg);
+  scale: 1;
+}
+.smooth__wrapper .smooth__content .main__inner .content__section .section__border__outer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background-color: transparent;
+  transform: translate(-50%, -50%);
+  width: 103%;
+  height: 103%;
+}
+.smooth__wrapper .smooth__content .main__inner .content__section .section__border__outer::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  outline: 2px solid var(--white);
+}
+.smooth__wrapper .smooth__content .main__inner .content__section .section__border__inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 100%;
+  height: 100%;
+}
+.smooth__wrapper .smooth__content .main__inner .content__section .section__border__inner::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  outline: 2px solid var(--white);
+}
+.smooth__wrapper .smooth__content .main__inner .content__section .content__home__wrapper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform: scale(1);
+}
+.smooth__wrapper .smooth__content .main__inner .content__section .content__home__wrapper .content__home__inner {
+  width: 110%;
+  height: 110%;
+  top: -4vh;
+  left: -8vh;
+  position: absolute;
+}
+.smooth__wrapper .smooth__content .main__inner .content__section .content__home__wrapper .content__home__inner .content__logo__wrap {
+  width: 7.6vw;
+  max-width: 150px;
+  height: 12.9vh;
+  max-height: 120px;
+  position: absolute;
+  top: 4.9vw;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0 auto;
+  display: flex;
+}
+.smooth__wrapper .smooth__content .main__inner .content__section .content__home__wrapper .content__home__inner .content__logo__wrap .logo__inner {
+  width: 100%;
+  height: 100%;
+}
+.smooth__wrapper .smooth__content .main__inner .content__section .content__home__wrapper .content__home__inner .content__logo__wrap .logo__inner svg {
+  width: 100%;
+  height: 100%;
+  vertical-align: middle;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: center;
+     object-position: center;
+  line-height: 1;
+}
+.smooth__wrapper .smooth__content .main__inner .content__section .content__home__wrapper .content__home__inner .content__desc__wrap {
+  display: none;
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+  top: 35%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transform: translate(0%);
+  font-family: var(--mainFont);
+  position: absolute;
+  max-width: calc(32 * var(--rem));
+}
+@media (max-width: 1200px) {
+  .smooth__wrapper .smooth__content .main__inner .content__section .content__home__wrapper .content__home__inner .content__desc__wrap {
+    top: 30%;
+  }
+}
+.smooth__wrapper .smooth__content .main__inner .content__section .content__home__wrapper .content__home__inner .content__desc__wrap h5 {
+  font-size: 1rem;
+  text-transform: uppercase;
+  line-height: 1.2;
+}
+.smooth__wrapper .smooth__content .main__inner .content__section .content__home__wrapper .content__home__inner .content__desc__wrap p {
+  line-height: 1.05;
+  font-size: 2.25rem;
+  text-transform: uppercase;
+  margin-top: 21px;
+}
+.smooth__wrapper .smooth__content .main__inner .content__section .content__home__wrapper .content__home__inner .content__boxs__wrap {
+  display: block;
+  right: 0;
+  left: 0;
+  font-family: var(--mainFont);
+  position: absolute;
+  z-index: 3;
+  top: 50%;
+  transform: translateY(-33%);
+}
+.smooth__wrapper .smooth__content .main__inner .content__section .content__home__wrapper .content__home__inner .content__boxs__wrap .content__box__inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  line-height: 1.05;
+  font-size: 6.6vw;
+  text-transform: uppercase;
+  position: relative;
+  overflow: hidden;
+}
+.smooth__wrapper .smooth__content .main__inner .content__section .content__home__wrapper .content__home__inner .content__boxs__wrap .content__box__inner .content__box__door {
+  position: absolute;
+  left: auto;
+  right: 0;
+  top: -10vw;
+  bottom: 0;
+  background-color: #fff;
+  width: 2px;
+  height: 0;
+  opacity: 0;
+  margin: auto 0;
+}
+.smooth__wrapper .smooth__content .main__inner .content__section .content__home__wrapper .content__home__inner .content__boxs__wrap .content__box__inner .content__box__door.bottom {
+  left: 0;
+  right: auto;
+  top: 10vw;
+  bottom: 0;
+  height: 0;
+}
+.smooth__wrapper .smooth__content .main__inner .content__section .content__home__wrapper .content__home__inner .content__boxs__wrap .content__box__inner .content__box__top {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: stretch;
+}
+.smooth__wrapper .smooth__content .main__inner .content__section .content__home__wrapper .content__home__inner .content__boxs__wrap .content__box__inner .content__box__top .content__box__line {
+  right: -2000px;
+  translate: none;
+  rotate: none;
+  scale: none;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+.smooth__wrapper .smooth__content .main__inner .content__section .content__home__wrapper .content__home__inner .content__boxs__wrap .content__box__inner .content__box__top .content__box__line .content__box__text {
+  padding: 0.2em 84px 0;
+  line-height: 1;
+  white-space: nowrap;
+  background-color: var(--mainBg);
+  border: 2px solid var(--white);
+  color: var(--white);
+}
+.smooth__wrapper .smooth__content .main__inner .content__section .content__home__wrapper .content__home__inner .content__boxs__wrap .content__box__inner .content__box__bottom {
+  left: -2000px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: stretch;
+  margin-top: 1.4vw;
+}
+.smooth__wrapper .smooth__content .main__inner .content__section .content__home__wrapper .content__home__inner .content__boxs__wrap .content__box__inner .content__box__bottom .content__box__door {
+  position: absolute;
+  left: auto;
+  right: auto;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  height: 1px;
+  color: var(--white);
+  opacity: 1;
+  transition: all 0.3s;
+  margin: auto 0;
+}
+.smooth__wrapper .smooth__content .main__inner .content__section .content__home__wrapper .content__home__inner .content__boxs__wrap .content__box__inner .content__box__bottom .content__box__line {
+  display: flex;
+  translate: none;
+  rotate: none;
+  scale: none;
+  justify-content: center;
+}
+.smooth__wrapper .smooth__content .main__inner .content__section .content__home__wrapper .content__home__inner .content__boxs__wrap .content__box__inner .content__box__bottom .content__box__line .content__box__text {
+  line-height: 1;
+  white-space: nowrap;
+  border: 2px solid var(--white);
+  color: var(--white);
+  background-color: var(--mainBg);
+  padding: 0.2em 84px 0;
+}
+.smooth__wrapper .smooth__content .main__inner .content__section .content__home__wrapper .content__home__inner .content__btn__wrap {
+  z-index: 6;
+  position: absolute;
+  height: 52.5px;
+  bottom: 7vw;
+  left: 0;
+  right: 0;
+  margin-right: auto;
+  margin-left: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.smooth__wrapper .smooth__content .main__inner .content__section .content__home__wrapper .content__home__inner .content__btn__wrap .content__btn {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  text-decoration: none;
+  border: 2px solid #fff;
+  border-radius: 50px;
+  background-color: var(--mainBg);
+  padding-top: 0.17rem;
+  padding-left: 21px;
+  padding-right: 21px;
+  height: 3vw;
+}
+.smooth__wrapper .smooth__content .main__inner .content__section .content__home__wrapper .content__home__inner .content__btn__wrap .content__btn .content__btn__text {
+  text-transform: uppercase;
+  font-size: 1.675rem;
+  line-height: 1;
+  white-space: nowrap;
+  color: #fff;
+  font-family: var(--mainFont);
+  font-weight: 400;
+}
+.smooth__wrapper .smooth__content .main__inner .content__section .content__home__wrapper .content__home__inner .content__btn__wrap .content__btn .btn__left__arrow {
+  margin-right: 1rem;
+}
+.smooth__wrapper .smooth__content .main__inner .content__section .content__home__wrapper .content__home__inner .content__btn__wrap .content__btn .btn__right__arrow {
+  margin-left: 1rem;
+}
+.smooth__wrapper .smooth__content .main__inner .content__section .content__home__wrapper .content__home__inner .project__card__wrap {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  padding: 2px;
+}/*# sourceMappingURL=main.css.map */
