@@ -99,4 +99,74 @@
   font-style: normal;
   font-weight: normal;
   src: local("Concretica"), url("../fonts/concrete-regular.otf") format("off");
+}
+@font-face {
+  font-family: "NeoGeoTrial-Regular";
+  font-weight: normal;
+  font-style: normal;
+  src: url("../fonts/NeoGeoTrial-Regular.woff2") format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: "NeoGeoTrial-Thin";
+  font-weight: normal;
+  font-style: normal;
+  src: url("/assets/fonts/NeoGeoTrial-Regular.woff2") format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: "NeoGeoTrial-Light";
+  font-weight: normal;
+  font-style: normal;
+  src: url("/assets/fonts/NeoGeoTrial-Light.woff2") format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: "NeoGeoTrial-ExtraLight";
+  font-weight: normal;
+  font-style: normal;
+  src: url("/assets/fonts/NeoGeoTrial-ExtraLight.woff2") format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: "NeoGeoTrial-Thin";
+  font-weight: normal;
+  font-style: normal;
+  src: url("/assets/fonts/") format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: "AztecaTrial-Kingsize";
+  font-weight: normal;
+  font-style: normal;
+  src: url("/assets/fonts/AztecaTrial-Kingsize.woff2") format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: "AztecaTrial-Text";
+  font-weight: normal;
+  font-style: normal;
+  src: url("/assets/fonts/AztecaTrial-Text.woff2") format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: "AfricaTrial-Rainfall";
+  font-weight: normal;
+  font-style: normal;
+  src: url("/assets/fonts/AfricaTrial-Rainfall.woff2") format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: "AfricaTrial-Drylands";
+  font-weight: normal;
+  font-style: normal;
+  src: url("/assets/fonts/AfricaTrial-Drylands.woff2") format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: "AfricaTrial-Cliff";
+  font-weight: normal;
+  font-style: normal;
+  src: url("/assets/fonts/AfricaTrial-Cliff.woff2") format("woff2");
+  font-display: swap;
 }/*# sourceMappingURL=fonts.css.map */
