@@ -87,6 +87,67 @@
         margin: auto;
         background-color: var(--mainBg);
         scale: 1;
+        .temp__bg {
+          display: block;
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          width: 100%;
+          height: 100%;
+          margin: auto;
+          background-color: transparent;
+          z-index: -2;
+          // display: flex;
+          justify-content: center;
+          align-items: center;
+
+          .temp__left {
+            background-color: transparent;
+            width: 0%;
+            height: 0%;
+            border: 2px solid #fff;
+            margin-bottom: -1px;
+            background-color: var(--mainBg);
+          }
+          .temp__right {
+            width: 0%;
+            height: 0%;
+            background-color: transparent;
+            border: 2px solid #fff;
+            // border-top: none;
+            position: absolute;
+            bottom: 0;
+            left: auto;
+            right: auto;
+            background-color: var(--mainBg);
+            border-top: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .center__line__left {
+              width: 50%;
+              height: 2px;
+              background-color: var(--white);
+              display: inline-block;
+              position: absolute;
+              top: 0;
+              left: 0;
+              right: auto;
+            }
+            .center__line__right {
+              width: 50%;
+              height: 2px;
+              background-color: var(--white);
+              display: inline-block;
+              position: absolute;
+              top: 0;
+              left: auto;
+              right: 0;
+            }
+          }
+        }
         .section__border__outer {
           position: absolute;
           top: 50%;
@@ -116,16 +177,68 @@
           width: 100%;
           height: 100%;
 
-          &::before {
-            content: "";
-            display: block;
+          &.not-intro {
+            outline: 2px solid var(--white);
+          }
+
+          .border__box {
+            display: none;
             position: absolute;
             top: 0;
             left: 0;
             right: 0;
             bottom: 0;
-            outline: 2px solid var(--white);
+            .border__top {
+              position: absolute;
+              top: 0;
+              left: auto;
+              right: auto;
+              width: 0%;
+              height: 2px;
+              display: inline-block;
+              background-color: var(--white);
+            }
+            .border__left {
+              position: absolute;
+              width: 2px;
+              height: 0%;
+              top: 0;
+              left: 0;
+              background-color: #fff;
+              display: inline-block;
+            }
+            .border__right {
+              position: absolute;
+              right: 0;
+              top: 0;
+              background-color: var(--white);
+              display: inline-block;
+              width: 2px;
+              height: 0%;
+            }
+            .border__bottom {
+              position: absolute;
+              bottom: 0;
+              right: auto;
+              left: auto;
+              width: 0%;
+              height: 2px;
+              display: inline-block;
+              background-color: var(--white);
+            }
           }
+
+          // &::before {
+          //   content: "";
+          //   display: block;
+          //   position: absolute;
+          //   top: 0;
+          //   left: 0;
+          //   right: 0;
+          //   bottom: 0;
+          //   outline: 2px solid var(--white);
+          //   // animation: drawOutline 3s linear forwards;
+          // }
         }
         .content__home__wrapper {
           position: absolute;
@@ -149,7 +262,7 @@
             &.skill-section {
               width: 100%;
               height: 100%;
-              top: 0px;
+              top: 0;
               left: 0px;
               overflow: hidden;
             }
@@ -211,13 +324,8 @@
                 text-align: center;
                 margin-right: auto;
                 margin-left: auto;
-                top: 35%;
-                left: 0;
-                right: 0;
-                bottom: 0;
                 transform: translate(0%);
                 font-family: var(--krText);
-                // position: absolute;
                 max-width: calc(32 * var(--rem));
 
                 h5 {
@@ -236,15 +344,17 @@
 
                 p {
                   line-height: 1.7;
-                  font-size: 0.975rem;
+                  font-size: 1vw;
                   text-transform: uppercase;
                   margin-top: 21px;
                   text-align: center;
                   margin-bottom: 2vw;
                   font-family: var(--krText);
+                  opacity: 0;
                 }
               }
               .content__logo__wrap {
+                display: none;
                 width: 18.3vw;
                 max-width: 800px;
                 height: 8vh;
@@ -286,7 +396,7 @@
               font-family: var(--mainFont);
               position: absolute;
               z-index: 3;
-              top: 50%;
+              top: 43%;
               transform: translateY(-33%);
 
               .content__box__inner {
@@ -488,9 +598,12 @@
                     text-align: center;
                     width: 100%;
                     .text-sm {
-                      font-size: 16px;
+                      font-size: 0.8vw;
                       font-family: var(--krText);
                       text-transform: capitalize;
+                      word-break: keep-all;
+                      max-width: 250px;
+                      line-height: 1.7;
                     }
                     .card__icon__wrap {
                       flex: 1;
@@ -518,7 +631,7 @@
                       }
                     }
                     .project__card__title {
-                      font-size: calc(30px + 220 * (100vw - 1200px) / 8800);
+                      font-size: 2vw;
                       font-family: var(--bigText);
                       line-height: 1.05;
                       text-transform: uppercase;
@@ -579,22 +692,27 @@
               }
 
               .skill__card__list {
+                position: relative;
+                display: flex;
                 --cards: 4;
                 --gap: 13;
                 translate: none;
                 rotate: none;
                 scale: none;
-                display: flex;
+                // display: flex;
                 transform: translate(0px, 0px);
                 flex-direction: column;
-                width: 100%;
+                width: 100%w;
                 height: calc(50% * var(--cards));
+                position: relative;
+                top: 0;
+                // background-color: var(--mainBg);
                 .skill__card {
                   translate: none;
                   rotate: none;
                   scale: none;
                   border: 2px solid var(--white);
-                  --height: 50%;
+                  --height: 40vh;
                   --width: 100%;
                   margin-top: calc(var(--gap) / 2);
                   margin-bottom: calc(var(--gap) / 2);
@@ -604,6 +722,15 @@
                   min-width: var(--width);
                   max-width: var(--width);
                   flex-basis: var(--height);
+                  background-color: var(--mainBg);
+                  &.top-card {
+                    position: relative;
+                    top: -61vh;
+                  }
+                  &.bottom-card {
+                    position: relative;
+                    top: 61vh;
+                  }
                   .skill__card__inner {
                     color: var(--white);
                     display: flex;
@@ -628,30 +755,35 @@
                       overflow-wrap: break-word;
                       word-break: break-word;
                       position: relative;
-                      line-height: 1;
-                      text-transform: uppercase;
-                      font-size: calc(
-                        125px + 916.6666666667 * (100vw - 1200px) / 8800
-                      );
-                      font-family: var(--bigText);
-                      transition: transform 0.3s;
-
-                      &::before {
-                        content: attr(data-shadow);
-                        display: block;
-                        position: absolute;
-                        top: 0;
-                        left: 0;
-                        color: rgba(0, 0, 0, 0);
-                        -webkit-text-stroke: 2px #fff;
+                      &:hover {
+                        span {
+                          transform: translateY(-12px);
+                          transition: transform 0.3s;
+                        }
+                      }
+                      span {
+                        line-height: 1;
+                        text-transform: uppercase;
                         font-size: calc(
                           125px + 916.6666666667 * (100vw - 1200px) / 8800
                         );
-                      }
-
-                      &:hover {
-                        transform: translateY(-50px); /* 글자를 위로 5px 올림 */
+                        font-family: var(--mdText);
                         transition: transform 0.3s;
+                        display: inline-block;
+                      }
+                      &::before {
+                        -webkit-text-stroke: 2px #fff;
+                        content: attr(data-shadow);
+                        display: block;
+                        position: absolute;
+                        top: 50%;
+                        left: 0;
+                        color: rgba(0, 0, 0, 0);
+                        font-size: calc(
+                          125px + 916.6666666667 * (100vw - 1200px) / 8800
+                        );
+                        font-family: var(--mdText);
+                        transform: translate(0, -50%);
                       }
                     }
                   }
@@ -666,5 +798,13 @@
 }
 
 #skillSection {
-  display: none;
+  width: 101vw;
+  height: 101vh;
+  background-color: transparent;
+  // display: none;
+}
+
+#introSection {
+  // display: none;
+  background-color: transparent;
 }
