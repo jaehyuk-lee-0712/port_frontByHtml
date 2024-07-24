@@ -731,6 +731,10 @@
                     position: relative;
                     top: 61vh;
                   }
+                  &.show-project {
+                    position: relative;
+                    bottom: -200px;
+                  }
                   .skill__card__inner {
                     color: var(--white);
                     display: flex;
@@ -743,7 +747,7 @@
                     padding: 1rem 2rem;
 
                     .card__top__header {
-                      font-size: 16px;
+                      font-size: 1vw;
                       line-height: 1.2;
                       text-transform: uppercase;
                       text-underline-offset: 0.15em !important;
@@ -759,11 +763,12 @@
                         span {
                           transform: translateY(-12px);
                           transition: transform 0.3s;
+                          text-transform: capitalize;
                         }
                       }
                       span {
                         line-height: 1;
-                        text-transform: uppercase;
+                        text-transform: capitalize;
                         font-size: calc(
                           125px + 916.6666666667 * (100vw - 1200px) / 8800
                         );

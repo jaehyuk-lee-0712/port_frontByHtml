@@ -1365,7 +1365,7 @@ body .is-layout-grid > * {
   font-family: var(--krText);
   text-transform: capitalize;
   word-break: keep-all;
-  max-width: 300px;
+  max-width: 250px;
   line-height: 1.7;
 }
 .smooth__wrapper .smooth__content .main__inner .content__section .content__home__wrapper .content__home__inner .project__card__wrap .project__card__inner .project__card .project__card__block .card__icon__wrap {
@@ -1491,6 +1491,10 @@ body .is-layout-grid > * {
   position: relative;
   top: 61vh;
 }
+.smooth__wrapper .smooth__content .main__inner .content__section .content__home__wrapper .content__home__inner .project__card__wrap .skill__card__list .skill__card.show-project {
+  position: relative;
+  bottom: -200px;
+}
 .smooth__wrapper .smooth__content .main__inner .content__section .content__home__wrapper .content__home__inner .project__card__wrap .skill__card__list .skill__card .skill__card__inner {
   color: var(--white);
   display: flex;
@@ -1503,7 +1507,7 @@ body .is-layout-grid > * {
   padding: 1rem 2rem;
 }
 .smooth__wrapper .smooth__content .main__inner .content__section .content__home__wrapper .content__home__inner .project__card__wrap .skill__card__list .skill__card .skill__card__inner .card__top__header {
-  font-size: 16px;
+  font-size: 1vw;
   line-height: 1.2;
   text-transform: uppercase;
   text-underline-offset: 0.15em !important;
@@ -1519,10 +1523,11 @@ body .is-layout-grid > * {
 .smooth__wrapper .smooth__content .main__inner .content__section .content__home__wrapper .content__home__inner .project__card__wrap .skill__card__list .skill__card .skill__card__inner .card__main__header:hover span {
   transform: translateY(-12px);
   transition: transform 0.3s;
+  text-transform: capitalize;
 }
 .smooth__wrapper .smooth__content .main__inner .content__section .content__home__wrapper .content__home__inner .project__card__wrap .skill__card__list .skill__card .skill__card__inner .card__main__header span {
   line-height: 1;
-  text-transform: uppercase;
+  text-transform: capitalize;
   font-size: calc(125px + 916.6666666667 * (100vw - 1200px) / 8800);
   font-family: var(--mdText);
   transition: transform 0.3s;
