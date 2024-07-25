@@ -498,7 +498,6 @@ body {
   color: #fff;
   background-color: var(--mainBg);
   width: 100%;
-  cursor: none !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
@@ -512,10 +511,6 @@ body {
   line-height: 26px;
   scrollbar-width: thin;
   scrollbar-color: var(--scrollbar-color) var(--color-bg);
-}
-
-.cursor-none {
-  cursor: none !important;
 }
 
 :where(.is-layout-flex) {
@@ -796,6 +791,15 @@ body .is-layout-grid > * {
   line-height: 1.6;
 }
 
+.hide-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
 #main {
   width: 100%;
   height: 100%;
@@ -881,6 +885,10 @@ body .is-layout-grid > * {
   margin: auto;
   background-color: var(--mainBg);
   scale: 1;
+}
+.smooth__wrapper .smooth__content .main__inner .content__section.view-project {
+  width: 90vw;
+  height: 90vh;
 }
 .smooth__wrapper .smooth__content .main__inner .content__section .temp__bg {
   display: block;
@@ -1462,7 +1470,7 @@ body .is-layout-grid > * {
   transform: translate(0px, 0px);
   flex-direction: column;
   width: 100% w;
-  height: calc(50% * var(--cards));
+  height: 165%;
   position: relative;
   top: 0;
 }
@@ -1476,16 +1484,15 @@ body .is-layout-grid > * {
   margin-top: calc(var(--gap) / 2);
   margin-bottom: calc(var(--gap) / 2);
   flex-shrink: 0;
-  min-height: var(--height);
-  max-height: var(--height);
-  min-width: var(--width);
-  max-width: var(--width);
+  max-height: 40vh;
+  min-height: 40vh;
+  max-width: 100%;
+  min-width: 100%;
   flex-basis: var(--height);
   background-color: var(--mainBg);
 }
 .smooth__wrapper .smooth__content .main__inner .content__section .content__home__wrapper .content__home__inner .project__card__wrap .skill__card__list .skill__card.top-card {
   position: relative;
-  top: -61vh;
 }
 .smooth__wrapper .smooth__content .main__inner .content__section .content__home__wrapper .content__home__inner .project__card__wrap .skill__card__list .skill__card.bottom-card {
   position: relative;
@@ -1493,7 +1500,6 @@ body .is-layout-grid > * {
 }
 .smooth__wrapper .smooth__content .main__inner .content__section .content__home__wrapper .content__home__inner .project__card__wrap .skill__card__list .skill__card.show-project {
   position: relative;
-  bottom: -200px;
 }
 .smooth__wrapper .smooth__content .main__inner .content__section .content__home__wrapper .content__home__inner .project__card__wrap .skill__card__list .skill__card .skill__card__inner {
   color: var(--white);
@@ -1545,6 +1551,31 @@ body .is-layout-grid > * {
   font-family: var(--mdText);
   transform: translate(0, -50%);
 }
+.smooth__wrapper .smooth__content .main__inner .content__section .content__home__wrapper .hide__ani__section {
+  width: 0%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  position: relative;
+  background-color: var(--mainBg);
+}
+.smooth__wrapper .smooth__content .main__inner .content__section .content__home__wrapper .hide__ani__section .proeject__name__wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.smooth__wrapper .smooth__content .main__inner .content__section .content__home__wrapper .hide__ani__section .proeject__name__wrap .project__main__name {
+  color: var(--white);
+  font-size: 5.5vw;
+  display: inline-block;
+  padding: 3rem 3rem 3rem 3rem;
+  font-family: var(--mdText);
+  opacity: 0;
+}
 
 #skillSection {
   width: 101vw;
@@ -1554,4 +1585,41 @@ body .is-layout-grid > * {
 
 #introSection {
   background-color: transparent;
+}
+
+#viewProject {
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+#viewProject .view_project_container {
+  width: 100%;
+  height: 100%;
+  border: 2px solid var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+#viewProject .view_project_container .view__proeject__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 10000px;
+}
+#viewProject .view_project_container .view__proeject__inner .view__name__wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+#viewProject .view_project_container .view__proeject__inner .view__name__wrap .view__main__name {
+  color: var(--white);
+  display: inline-block;
+  padding: 3rem 3rem 3rem 3rem;
+  text-transform: capitalize;
+  font-size: 10.6vw;
+  font-family: var(--mdText);
 }/*# sourceMappingURL=style.css.map */

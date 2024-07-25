@@ -10,7 +10,7 @@ body {
   color: #fff;
   background-color: var(--mainBg);
   width: 100%;
-  cursor: none !important;
+  // cursor: none !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
@@ -30,7 +30,7 @@ body {
 
 // body classes setting
 .cursor-none {
-  cursor: none !important;
+  // cursor: none !important;
 }
 
 :where(.is-layout-flex) {
@@ -251,4 +251,13 @@ body .is-layout-grid > * {
 .wp-block-pullquote {
   font-size: 1.5em;
   line-height: 1.6;
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
 }

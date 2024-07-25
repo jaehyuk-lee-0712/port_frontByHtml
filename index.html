@@ -101,14 +101,14 @@
                 </div>
               </section>
               <section class="content__section" id="projectSection">
-                <div class="section__border__outer"></div>
+                <!-- <div class="section__border__outer"></div> -->
                 <div class="section__border__inner not-intro"></div>
                 <div class="content__home__wrapper">
                   <div class="content__home__inner next-section">
                     <div class="project__card__wrap" id="projectCard">
                       <ul class="project__card__inner">
                         <li class="project__card">
-                          <a href="/" class="project__card__block">
+                          <a class="project__card__block">
                             <p class="text-sm">
                               직면한 문제를 다양한 생각으로 해결하는 <br />
                               개발자
@@ -207,7 +207,7 @@
                           </a>
                         </li>
                         <li class="project__card">
-                          <a href="/" class="project__card__block">
+                          <a class="project__card__block">
                             <p class="text-sm">
                               실무 경험을 바탕으로 더 빠르게 배워가는 <br />
                               개발자
@@ -280,7 +280,7 @@
                           </a>
                         </li>
                         <li class="project__card">
-                          <a href="/" class="project__card__block">
+                          <a class="project__card__block">
                             <p class="text-sm">
                               실무 경험을 바탕으로 더 빠르게 배워가는 <br />
                               개발자
@@ -353,7 +353,7 @@
                           </a>
                         </li>
                         <li class="project__card">
-                          <a href="/" class="project__card__block">
+                          <a class="project__card__block">
                             <p class="text-sm">
                               실무 경험을 바탕으로 더 빠르게 배워가는 <br />
                               개발자
@@ -435,13 +435,13 @@
                 <div class="section__border__inner not-intro"></div>
                 <div class="content__home__wrapper">
                   <div class="content__home__inner skill-section">
-                    <div
-                      class="project__card__wrap skill-section"
-                      id="skillSection"
-                    >
+                    <div class="project__card__wrap skill-section">
                       <ul class="skill__card__list">
                         <li class="skill__card top-card">
-                          <a href="/" class="skill__card__inner">
+                          <a
+                            class="skill__card__inner"
+                            onclick="projectCardClick(event)"
+                          >
                             <h4 class="card__top__header">나만의 개발일지</h4>
                             <h3
                               class="card__main__header"
@@ -451,8 +451,12 @@
                             </h3>
                           </a>
                         </li>
-                        <li class="skill__card bottom-card">
-                          <a href="/" class="skill__card__inner">
+                        <li class="skill__card show-project">
+                          <a
+                            href="/"
+                            class="skill__card__inner"
+                            onclick="projectCardClick(event)"
+                          >
                             <h4 class="card__top__header">나만의 개발일지</h4>
                             <h3
                               class="card__main__header"
@@ -463,7 +467,11 @@
                           </a>
                         </li>
                         <li class="skill__card show-project">
-                          <a href="/" class="skill__card__inner">
+                          <a
+                            href="/"
+                            class="skill__card__inner"
+                            onclick="projectCardClick(event)"
+                          >
                             <h4 class="card__top__header">개발 일정 관리</h4>
                             <h3 class="card__main__header" data-shadow="Dately">
                               <span>Dately</span>
@@ -471,7 +479,11 @@
                           </a>
                         </li>
                         <li class="skill__card show-project">
-                          <a href="/" class="skill__card__inner">
+                          <a
+                            href="/"
+                            class="skill__card__inner"
+                            onclick="projectCardClick(event)"
+                          >
                             <h4 class="card__top__header">
                               한 눈에 보는 신용카드
                             </h4>
@@ -484,7 +496,11 @@
                           </a>
                         </li>
                         <li class="skill__card show-project">
-                          <a href="/" class="skill__card__inner">
+                          <a
+                            href="/"
+                            class="skill__card__inner"
+                            onclick="projectCardClick(event)"
+                          >
                             <h4 class="card__top__header">
                               일상 속의 여유 찾기
                             </h4>
@@ -494,6 +510,24 @@
                           </a>
                         </li>
                       </ul>
+                    </div>
+                  </div>
+                  <div class="hide__ani__section">
+                    <div class="proeject__name__wrap">
+                      <span class="project__main__name">Druwa</span>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <section
+                class="content__section view-project hide-scrollbar"
+                id="viewProject"
+              >
+                <div class="view_project_container">
+                  <div class="view__proeject__inner">
+                    <!-- <span class="view__center__line"></span> -->
+                    <div class="view__name__wrap">
+                      <span class="view__main__name"> Dately </span>
                     </div>
                   </div>
                 </div>
@@ -561,6 +595,9 @@
         delay: 3,
       });
 
+      gsap.set("#bottomBoxWrap", {
+        marginTop: "1.4vw",
+      });
       // gsap anime start
       const descAnime = gsap.timeline({ paused: true });
 
@@ -705,183 +742,253 @@
         },
       });
 
-      gsap.to("#introSection", {
-        scale: 0.7,
-        duration: 10,
-        scrollTrigger: {
-          trigger: "#introSection",
-          start: "top+=2000px",
-          end: "bottom+=4000px",
-          markers: false,
-          scrub: 6,
-          toggleClass: "active",
-        },
-      });
-
-      gsap.to("#bottomBoxWrap", {
-        marginTop: 0,
-        duration: 6,
-        scrollTrigger: {
-          trigger: "#bottomBoxWrap",
-          start: "top+=2000px",
-          end: "bottom+=3000px",
-          markers: false,
-          scrub: 2.2,
-          toggleClass: "active",
-        },
-      });
-
-      gsap.to("#projectSection", {
-        width: "80vw",
-        height: "80vh",
-        duration: 2,
-        scrollTrigger: {
-          trigger: "#projectSection",
-          start: "top+=2600px",
-          end: "bottom+=4000px",
-          markers: false,
-          scrub: 1,
-          toggleClass: "active",
-          onEnter: () => {
-            gsap.to("#projectSection", {
-              display: "flex",
-            });
-          },
-        },
-      });
-
-      gsap.to("#projectCard", {
-        left: -2000,
-        duration: 6,
-        scrap: 4,
-        toggleClass: "active",
-        scrollTrigger: {
-          trigger: "#projectCard",
-          start: "top+=3500px",
-          end: "bottom+=7000px",
-          markers: false,
-          scrub: 8,
-          toggleClass: "active",
-          onEnter: () => {
-            gsap.to("#projectCard", {
-              display: "flex",
-            });
-          },
-        },
-      });
-      gsap.to("#skillSection", {
-        width: "80vw",
-        height: "80vh",
-        duration: 5,
-        scrollTrigger: {
-          trigger: "#skillSection",
-          start: "top+=5500px",
-          end: "bottom+=5500px",
-          markers: false,
-          scrub: 2.2,
-          toggleClass: "active",
-        },
-      });
-      // Animate #introSection's scale
-      // gsap.fromTo("#introSection", {
-      //   scale: 0.5,
+      // gsap.to("#introSection", {
+      //   scale: 0.7,
+      //   duration: 10,
       //   scrollTrigger: {
-      //     trigger: "#skillSection",
-      //     start: "top+=5500px",
-      //     end: "bottom+=5500px",
+      //     trigger: "#introSection",
+      //     start: "top+=2000px",
+      //     end: "bottom+=4000px",
       //     markers: false,
-      //     scrub: 2.2,
+      //     scrub: 6,
+      //     toggleClass: "active",
       //   },
       // });
-      gsap.to(".skill__card__list", {
-        width: "80vw",
-        height: "80vh",
-        duration: 5,
-        scrollTrigger: {
-          trigger: ".skill__card__list",
-          start: "top+=5500px",
-          end: "bottom+=5500px",
-          markers: false,
-          scrub: 2.2,
-          toggleClass: "active",
-          // onUpdate: () => {
-          //   gsap.to(".skill__card__list", {
-          //     display: "block",
-          //   });
-          // },
-          // onLeave: () => {
-          //   gsap.to(".skill__card__list", {
-          //     display: "none",
-          //   });
-          // },
+
+      const projectAni = gsap.timeline();
+      projectAni.to(
+        "#bottomBoxWrap",
+        {
+          marginTop: 0,
+          duration: 2,
+          ease: "expo.inOut",
         },
+        "a"
+      );
+      // projectAni.to(
+      //   "#introSection",
+      //   {
+      //     scale: 0.7,
+      //     duration: 7,
+      //   },
+      //   "a"
+      // );
+
+      projectAni.fromTo(
+        "#introSection",
+        {
+          scale: 1,
+        },
+        {
+          scale: 0.7,
+          duration: 7,
+        },
+        "a"
+      );
+      projectAni.to(
+        "#projectSection",
+        {
+          display: "flex",
+        },
+        "a"
+      );
+      projectAni.to(
+        "#projectSection",
+        {
+          width: "80vw",
+          height: "80vh",
+          duration: 10,
+          scrub: 2,
+        },
+        "a"
+      );
+      projectAni.to(
+        "#projectCard",
+        {
+          left: -2000,
+          duration: 20,
+        },
+        "a"
+      );
+
+      ScrollTrigger.create({
+        animation: projectAni,
+        trigger: "#introSection",
+        start: "2000px",
+        end: "6000px",
+        scrub: 6,
+        markers: false,
+        toggleClass: "active",
       });
 
-      const tl2 = gsap.timeline({
-        defaults: {
-          duration: 5,
+      const skillSectionAni = gsap.timeline();
+
+      // skillSectionAni.fromTo(
+      //   "#introSection",
+      //   {
+      //     scale: 0.7,
+      //   },
+      //   {
+      //     scale: 0.55,
+      //     duration: 0.7,
+      //     ease: "expo.inOut",
+      //   },
+      //   "c"
+      // );
+
+      skillSectionAni.to(
+        "#introSection",
+        {
+          width: "70vw",
+          height: "70vh",
+          duration: 0.7,
         },
+        "c"
+      );
+
+      skillSectionAni.to(
+        "#skillSection",
+        {
+          width: "80vw",
+          height: "80vh",
+          duration: 0.7,
+          ease: "expo.inOut",
+        },
+        "c"
+      );
+
+      skillSectionAni.to(
+        ".content__box__inner",
+        {
+          fontSize: "5vw",
+          duration: 0.7,
+        },
+        "c"
+      );
+
+      // skillSectionAni.to(
+      //   "#introSection",
+      //   {
+      //     scale: 0.55,
+      //     duration: 0.7,
+      //     ease: "expo.inOut",
+      //   },
+      //   "c"
+      // );
+
+      skillSectionAni.to(
+        "#projectSection",
+        {
+          scale: 0.8,
+        },
+        "c"
+      );
+
+      skillSectionAni.fromTo(
+        ".top-card",
+        {
+          yPercent: -100,
+        },
+        { yPercent: 0, duration: 0.7, ease: "expo.inOut" },
+        "c"
+      );
+
+      skillSectionAni.fromTo(
+        ".show-project",
+        {
+          yPercent: 160,
+        },
+        {
+          yPercent: 0,
+          // delay: 0.4,
+          duration: 0.7,
+          ease: "expo.inOut",
+        },
+        "c"
+      );
+      skillSectionAni.to(
+        ".content__box__top",
+        {
+          bottom: "-5vw",
+        },
+        "c"
+      );
+      skillSectionAni.to(
+        "#bottomBoxWrap",
+        {
+          top: "-2.22vw",
+          duration: 0.7,
+          ease: "expo.inOut",
+        },
+        "c"
+      );
+
+      skillSectionAni.to(".skill__card__list", {
+        yPercent: -155,
+        duration: 1.5,
       });
 
-      tl2
-        .to(".bottom-card", {
-          top: "0",
-          duration: 5,
-          scrollTrigger: {
-            trigger: ".bottom-card",
-            start: "top+=4400px",
-            end: "bottom+=5500px",
-            markers: false,
-            scrub: 2.2,
-            // toggleClass: "active", // 이 줄을 제거합니다.
-          },
-        })
-        .to(".top-card", {
-          top: "0",
-          duration: 5,
-          scrollTrigger: {
-            trigger: ".bottom-card",
-            start: "top+=4000px",
-            end: "bottom+=5500px",
-            markers: false,
-            scrub: 2.2,
-            // toggleClass: "active", // 이 줄을 제거합니다.
-          },
+      ScrollTrigger.create({
+        animation: skillSectionAni,
+        trigger: "#skillSection",
+        start: "6100px",
+        end: "12000px",
+        scrub: 2,
+        toggleClass: "active",
+      });
+
+      const viewProjectAni = gsap.timeline();
+
+      viewProjectAni.to(".view__proeject__inner", {
+        yPercent: -10,
+        duration: 0.7,
+      });
+
+      const viewProjectTrigger = ScrollTrigger.create({
+        animation: viewProjectAni,
+        trigger: "#viewProject",
+        start: "top top",
+        end: "+=4500px",
+        scrub: 8,
+        toggleClass: "active",
+        markers: true,
+      });
+
+      viewProjectTrigger.disable();
+
+      const viewProjectElement = document.querySelector("#viewProject");
+
+      function projectCardClick(event) {
+        console.log("@@@@");
+        event.preventDefault();
+        event.stopPropagation(); // 이벤트 전파를 막음
+
+        gsap.to(".hide__ani__section", {
+          width: "100%",
+          duration: 2,
         });
 
-      gsap.to(".show-project", {
-        bottom: "0",
-        scrollTrigger: {
-          trigger: ".bottom-card",
-          start: "top+=5500px",
-          end: "top+=5700px",
-        },
-      });
+        gsap.to(".project__main__name", {
+          opacity: 1,
+          duration: 2,
+        });
+      }
 
-      // ScrollTrigger.create({
-      //   trigger: ".bottom-card",
-      //   start: "top+=5500px",
-      //   end: "top+=5700px",
+      document.querySelectorAll(".project__card").forEach((card) => {
+        card.addEventListener("click", (event) => {
+          event.preventDefault();
+          event.stopPropagation(); // 이벤트 전파를 막음
 
-      //   onEnter: () => {
-      //     gsap.to(".show-project", {
-      //       bottom: "0",
-      //     });
-      //   },
-      // });
+          gsap.to(".hide__ani__section", {
+            width: "100%",
+            duration: 2,
+          });
 
-      gsap.to(".skill__card__list", {
-        top: "-760px",
-        duration: 1,
-        scrap: 1.7,
-        toggleClass: "active",
-        scrollTrigger: {
-          trigger: ".skill__card__list",
-          start: "top+=6000px",
-          end: "bottom+=9000px",
-          scrub: 2,
-          toggleClass: "active",
-        },
+          gsap.to(".project__main__name", {
+            opacity: 1,
+            duration: 2,
+          });
+        });
       });
     });
   </script>

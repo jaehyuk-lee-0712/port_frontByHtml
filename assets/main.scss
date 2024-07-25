@@ -87,6 +87,11 @@
         margin: auto;
         background-color: var(--mainBg);
         scale: 1;
+
+        &.view-project {
+          width: 90vw;
+          height: 90vh;
+        }
         .temp__bg {
           display: block;
           position: absolute;
@@ -267,6 +272,7 @@
               overflow: hidden;
             }
             position: absolute;
+
             .content__intro__wrap {
               display: flex;
               justify-content: center;
@@ -703,7 +709,8 @@
                 transform: translate(0px, 0px);
                 flex-direction: column;
                 width: 100%w;
-                height: calc(50% * var(--cards));
+                // height: calc(50% * var(--cards));
+                height: 165%;
                 position: relative;
                 top: 0;
                 // background-color: var(--mainBg);
@@ -717,15 +724,20 @@
                   margin-top: calc(var(--gap) / 2);
                   margin-bottom: calc(var(--gap) / 2);
                   flex-shrink: 0;
-                  min-height: var(--height);
-                  max-height: var(--height);
-                  min-width: var(--width);
-                  max-width: var(--width);
+                  // min-height: var(--height);
+                  // max-height: var(--height);
+                  max-height: 40vh;
+                  min-height: 40vh;
+                  // min-width: var(--width);
+                  // max-width: var(--width);
+                  max-width: 100%;
+                  min-width: 100%;
                   flex-basis: var(--height);
+                  // height: 32%;
                   background-color: var(--mainBg);
                   &.top-card {
                     position: relative;
-                    top: -61vh;
+                    // top: -61vh;
                   }
                   &.bottom-card {
                     position: relative;
@@ -733,7 +745,7 @@
                   }
                   &.show-project {
                     position: relative;
-                    bottom: -200px;
+                    // bottom: -200px;
                   }
                   .skill__card__inner {
                     color: var(--white);
@@ -796,6 +808,31 @@
               }
             }
           }
+          .hide__ani__section {
+            width: 0%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            flex-wrap: wrap;
+            position: relative;
+            background-color: var(--mainBg);
+            .proeject__name__wrap {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              flex-wrap: wrap;
+              .project__main__name {
+                color: var(--white);
+                font-size: 5.5vw;
+                display: inline-block;
+                padding: 3rem 3rem 3rem 3rem;
+                font-family: var(--mdText);
+                opacity: 0;
+              }
+            }
+          }
         }
       }
     }
@@ -812,4 +849,42 @@
 #introSection {
   // display: none;
   background-color: transparent;
+}
+
+// view Project Section
+#viewProject {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  .view_project_container {
+    width: 100%;
+    height: 100%;
+    border: 2px solid var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    .view__proeject__inner {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 10000px;
+      .view__name__wrap {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        .view__main__name {
+          color: var(--white);
+          display: inline-block;
+          padding: 3rem 3rem 3rem 3rem;
+          text-transform: capitalize;
+          font-size: 10.6vw;
+          font-family: var(--mdText);
+        }
+      }
+    }
+  }
 }
