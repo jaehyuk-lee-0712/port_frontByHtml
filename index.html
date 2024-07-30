@@ -951,7 +951,7 @@
         end: "+=4500px",
         scrub: 8,
         toggleClass: "active",
-        markers: true,
+        markers: false,
       });
 
       viewProjectTrigger.disable();
@@ -959,7 +959,6 @@
       const viewProjectElement = document.querySelector("#viewProject");
 
       function projectCardClick(event) {
-        console.log("@@@@");
         event.preventDefault();
         event.stopPropagation(); // 이벤트 전파를 막음
 
